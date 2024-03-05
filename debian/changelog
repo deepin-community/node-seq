@@ -1,5 +1,42 @@
-template-repository (1.0-1) unstable; urgency=medium
+node-seq (0.3.5-3) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor ]
+  * Bump debhelper from old 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Update Vcs-* headers from URL redirect.
+  * Use canonical URL in Vcs-Git.
+  * Remove obsolete field Name from debian/upstream/metadata (already
+    present in machine-readable debian/copyright).
+  * Remove constraints unnecessary since stretch:
+    + node-seq: Drop versioned constraint on node-chainsaw and node-hashish in
+      Depends.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Ross Gammon ]
+  * Remove myself from Uploaders
+
+  [ Yadd ]
+  * Add "Rules-Requires-Root: no"
+  * Update debian/watch to use npm registry
+  * Bump debhelper compatibility level to 13
+  * Use dh-sequence-nodejs auto install
+  * Update standards version to 4.6.0, no changes needed.
+  * Drop dependency to nodejs
+
+ -- Yadd <yadd@debian.org>  Mon, 17 Jan 2022 22:08:02 +0100
+
+node-seq (0.3.5-2) unstable; urgency=medium
+
+  * Fix dependency versions (Closes: #820291)
+  * Remove comments from debian/rules
+  * Unapply patches from source
+  * Update my email address
+  * Bump standards version, use https: for copyright format URL
+  * Switch Section: hint to javascript
+
+ -- Ross Gammon <rossgammon@debian.org>  Tue, 08 Aug 2017 17:27:33 +0200
+
+node-seq (0.3.5-1) unstable; urgency=low
+
+  * Initial release (Closes: #802008)
+
+ -- Ross Gammon <rossgammon@mail.dk>  Sun, 13 Mar 2016 16:58:39 +0100

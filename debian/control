@@ -1,15 +1,29 @@
-Source: template-repository
-Section: unknown
+Source: node-seq
+Section: javascript
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Yadd <yadd@debian.org>
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-chainsaw <!nocheck>
+ , node-hashish <!nocheck>
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-seq
+Vcs-Git: https://salsa.debian.org/js-team/node-seq.git
+Homepage: https://github.com/substack/node-seq
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: node-seq
+Architecture: all
+Depends: ${misc:Depends}
+ , node-chainsaw
+ , node-hashish
+Description: Chainable asynchronous flow control
+ Seq is an asynchronous flow control library with a chainable interface for
+ sequential and parallel actions. Even the error handling is chainable.
+ .
+ Each action in the chain operates on a stack of values. There is also a
+ variables hash for storing values by name.
+ .
+ Node.js is an event-based server-side JavaScript engine.

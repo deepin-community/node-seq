@@ -1,0 +1,2 @@
+node-expresso needs to be packaged so that node-seq's test suite can be
+run during the build.
